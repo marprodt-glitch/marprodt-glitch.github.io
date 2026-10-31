@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free candy!</title>
+    <link rel="stylesheet" href="mycss.css">
+</head>
+<body class="candy-page">
+    <main>
+        <h1>Free candy!</h1>
+        <video id="candy-video" controls autoplay loop playsinline>
+            <source src="videoplayback%20%282%29.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
+        <p id="play-message" hidden>Autoplay was blocked. Press play to start the video.</p>
+        <a href="index.html">Back</a>
+    </main>
+    <script>
+        const candyVideo = document.getElementById("candy-video");
+        candyVideo.volume = 1;
+        candyVideo.play().catch(() => {
+            document.getElementById("play-message").hidden = false;
+        });
+    </script>
+</body>
+</html>

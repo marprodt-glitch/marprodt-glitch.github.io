@@ -8,25 +8,29 @@ while (howGayAreYou !== null && isNaN(howGayAreYou)) {
 }
 
 if (howGayAreYou !== null) {
-    const areYouSure = window.confirm("are you sure?");
+    window.setTimeout(() => {
+        const areYouSure = window.confirm("are you sure?");
 
-    if (areYouSure) {
-        const percentage = Number(howGayAreYou);
-        const result = document.getElementById("result");
+        if (areYouSure) {
+            document.getElementById("free-candy-button").hidden = false;
+            const percentage = Number(howGayAreYou);
+            const result = document.getElementById("result");
 
-        if (percentage < 1) {
-            result.textContent = "ugly fat lying faggot nigger";
-        } else if (percentage > 100) {
-            result.textContent = messageAbove100;
-            document.getElementById("over100-picture").hidden = false;
-        } else {
-            result.textContent = "you are " + howGayAreYou + "% gay";
+            if (percentage < 1) {
+                result.textContent = "stop lying fat faggot nigger black monkey jew that you are";
+                document.getElementById("lying-picture").hidden = false;
+            } else if (percentage > 100) {
+                result.textContent = messageAbove100;
+                document.getElementById("over100-picture").hidden = false;
+            } else {
+                result.textContent = "you are " + howGayAreYou + "% gay";
 
-            if (percentage > 1) {
-                document.getElementById("picture").hidden = false;
+                if (percentage > 1) {
+                    document.getElementById("picture").hidden = false;
+                }
             }
         }
-    }
+    }, 0);
 }
 
 
