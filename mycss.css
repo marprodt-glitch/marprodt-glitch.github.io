@@ -15,7 +15,8 @@ main {
 	font-size: 1.5rem;
 }
 
-#picture:not([hidden]) {
+#picture:not([hidden]),
+#over100-picture:not([hidden]) {
 	display: block;
 	width: min(100%, 360px);
 	height: auto;
