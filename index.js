@@ -15,7 +15,7 @@ if (howGayAreYou !== null) {
         const result = document.getElementById("result");
 
         if (percentage < 1) {
-            result.textContent = "You're lying!";
+            result.textContent = "ugly fat lying faggot nigger";
         } else if (percentage > 100) {
             result.textContent = messageAbove100;
             document.getElementById("over100-picture").hidden = false;
